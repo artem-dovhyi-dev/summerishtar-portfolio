@@ -93,12 +93,13 @@ window.PROJECTS = [
     tags: ['Branding'],
     discipline: 'Identity · Card system · Team project',
     cover: 'bts-cover',
+    hero: 'bts-system',
     tone: '#e94a2a',
     intro:
       'The “BTS Train” project was given by my university in collaboration with BTS. Our teacher informed us it would be a team effort: my team of three girls rebranded it into something more playful and mesmerizing.',
     solution:
       'Everyday life in Bangkok can be busy, stressful and tiring. It was time to bring back the concept of the “land of smiles” and make transportation more than just “transportation”: a place where people have a connection, boosting up your energy. Fun fact: we leaned into orange because it makes you feel energized and enthusiastic.',
-    gallery: ['bts-system', 'bts-train', 'bts-cards'],
+    gallery: ['bts-cover', 'bts-train', 'bts-cards'],
   },
   {
     slug: 'global-double-degree',

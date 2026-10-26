@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thet Htar San (Summer) · Visual Designer</title>
+  <meta name="description" content="Thet Htar San is a Bangkok-based visual designer working across packaging, brand identity, illustration and campaigns." />
+  <meta property="og:title" content="Thet Htar San · Visual Designer" />
+  <meta property="og:description" content="Packaging, brand identity and illustration from Bangkok." />
+  <meta property="og:image" content="assets/img/botanik-cans.webp" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ff5b2e'/%3E%3C/svg%3E" />
+  <link rel="preload" href="assets/fonts/inter-tight-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"><span>View</span></div>
+
+  <header class="nav" id="top">
+    <a class="nav__logo" href="#top" aria-label="Home">
+      <span class="sun" aria-hidden="true"></span>
+      <span>summerishtar</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="nav__cta">Let’s talk</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__meta reveal">
+        <span class="status"><i></i>Available for freelance</span>
+        <span>Bangkok, TH · <time id="clock">--:--</time></span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line reveal">I’m Thet Htar San,</span>
+        <span class="line reveal br">friends call me <em>Summer</em>.</span>
+        <span class="line reveal muted">A visual designer making packaging, brands &amp; illustrations people want to <em class="hl">pick up</em>.</span>
+      </h1>
+
+      <a class="badge" href="#work" aria-label="See selected work">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>
+          <text><textPath href="#circ" textLength="486" lengthAdjust="spacing">packaging · branding · illustration · bangkok · </textPath></text>
+        </svg>
+        <span>↓</span>
+      </a>
+
+      <ul class="tags reveal" aria-label="Services">
+        <li>Packaging Design</li>
+        <li>Brand Identity</li>
+        <li>Illustration</li>
+        <li>Campaign &amp; Merch</li>
+        <li>Social Media Design</li>
+        <li>Concept Art</li>
+      </ul>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-label="Work preview">
+      <div class="marquee__track" id="marquee"></div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work" id="work">
+      <div class="section-head reveal">
+        <h2>Selected work <sup id="count"></sup></h2>
+        <div class="filters" role="tablist" aria-label="Filter projects" id="filters"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <p class="eyebrow reveal">About me</p>
+      <div class="about__body">
+        <h2 class="about__lead reveal">
+          I love good stories, so my work tends to feel <em>hand-made</em>, emotional and personal, even when it’s sitting on a supermarket shelf.
+        </h2>
+        <div class="about__text reveal">
+          <p>I started out in 2018 as an intern at Pencell Animation Studio, colouring scenes and designing characters, and grew into a lead concept artist. Agency life at Idea Planet taught me speed: six visuals a day, 22 brands in a month.</p>
+          <p>Today I’m based in Bangkok, where I’ve worked with the PepsiCo creative team on launches like Lay’s Sour &amp; Spicy Extra Chili. I design packaging, brand systems and illustrations, and I’m happiest when a project lets me do all three.</p>
+        </div>
+      </div>
+      <ul class="stats">
+        <li class="reveal"><b data-count="2018">2018</b><span>Designing since</span></li>
+        <li class="reveal"><b data-count="22">22</b><span>Brands handled in one month</span></li>
+        <li class="reveal"><b data-count="6">6</b><span>Visuals a day at agency pace</span></li>
+        <li class="reveal"><b>MM → TH</b><span>Myanmar roots, Bangkok based</span></li>
+      </ul>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="experience" id="experience">
+      <p class="eyebrow reveal">Experience</p>
+      <ol class="xp">
+        <li class="reveal"><span class="xp__org">Freelance</span><span class="xp__role">Visual Designer</span><span class="xp__when">Now</span></li>
+        <li class="reveal"><span class="xp__org">PepsiCo Creative Team, Thailand</span><span class="xp__role">Packaging &amp; campaign design</span><span class="xp__when">2024</span></li>
+        <li class="reveal"><span class="xp__org">Idea Planet</span><span class="xp__role">Graphic Designer, social media</span><span class="xp__when">Agency</span></li>
+        <li class="reveal"><span class="xp__org">Pencell Animation Studio</span><span class="xp__role">Lead Concept Artist · Ywat Hlay – RACHEL</span><span class="xp__when">2021</span></li>
+        <li class="reveal"><span class="xp__org">Pencell Animation Studio</span><span class="xp__role">Concept Artist &amp; Scene Assistant · My Girlfriend Is Better Than Yours</span><span class="xp__when">2019</span></li>
+        <li class="reveal"><span class="xp__org">Pencell Animation Studio</span><span class="xp__role">Concept Artist · Tha Di Ya Del / Colorist Intern · Tori Travel</span><span class="xp__when">2018</span></li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- CONTACT -->
+  <footer class="contact" id="contact">
+    <p class="eyebrow">Contact</p>
+    <h2 class="contact__title">
+      Got a product that deserves<br />a better <em>shelf life?</em>
+    </h2>
+    <p class="contact__sub">Not into calls? Me neither. Feel free to drop me an email.</p>
+    <div class="contact__actions">
+      <button class="copy" id="copy" type="button">
+        <span class="copy__email" id="email"></span>
+        <span class="copy__hint" data-done="Copied!">Copy</span>
+      </button>
+      <a class="pill" href="https://www.behance.net/summerishtar" target="_blank" rel="noopener">Behance ↗</a>
+    </div>
+    <div class="contact__bottom">
+      <span>© <span id="year"></span> Thet Htar San</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+    <div class="contact__giant" aria-hidden="true">summer</div>
+  </footer>
+
+  <!-- CASE STUDY -->
+  <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="case-title" hidden>
+    <div class="case__scroll" id="case-scroll">
+      <button class="case__close" id="case-close" type="button" aria-label="Close project">×</button>
+      <article class="case__inner" id="case-body"></article>
+    </div>
+  </div>
+
+  <script>window.SITE = { email: 'hello@summerishtar.com' };</script>
+  <script src="assets/js/projects.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

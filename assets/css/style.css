@@ -249,15 +249,31 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 }
 .stats li { padding: 28px 20px 0 0; display: flex; flex-direction: column; gap: 6px; }
 .stats li + li { padding-left: 20px; border-left: 1px solid var(--line); }
-.stats b { font-size: clamp(36px, 4.4vw, 68px); font-weight: 500; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+.stats b { font-size: clamp(32px, 4vw, 60px); font-weight: 500; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
 .stats span { color: var(--muted); font-size: 14px; }
+
+/* ---------- PROCESS ---------- */
+.process { padding: clamp(80px, 10vw, 140px) var(--pad) 0; }
+.process__title { font-size: clamp(28px, 3.4vw, 52px); line-height: 1.08; letter-spacing: -0.035em; font-weight: 500; margin: 0 0 clamp(40px, 5vw, 72px); max-width: 18em; }
+.process__title em { color: var(--accent); }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 1.4vw, 20px); counter-reset: step; }
+.steps li {
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 24px 22px 28px; display: flex; flex-direction: column; gap: 10px;
+  transition: transform 0.5s var(--ease), background 0.4s, color 0.4s;
+}
+.steps li:hover { transform: translateY(-6px); background: var(--ink); color: var(--paper); }
+.steps li:hover p { color: rgba(251, 248, 242, 0.7); }
+.steps__num { font-family: var(--serif); font-style: italic; font-size: 40px; line-height: 1; color: var(--accent); margin-bottom: 18px; }
+.steps h3 { margin: 0; font-size: 20px; font-weight: 500; letter-spacing: -0.02em; }
+.steps p { margin: 0; color: #4a453f; font-size: 15px; transition: color 0.4s; }
 
 /* ---------- EXPERIENCE ---------- */
 .experience { padding: clamp(80px, 10vw, 140px) var(--pad); }
 .xp { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
 .xp li {
   display: grid;
-  grid-template-columns: 1.1fr 1.6fr auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) 7.5em;
   gap: 20px;
   padding: 24px 8px;
   border-bottom: 1px solid var(--line);
@@ -275,7 +291,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .xp li:hover .xp__role, .xp li:hover .xp__when { color: rgba(251, 248, 242, 0.7); }
 .xp__org { font-size: clamp(18px, 1.8vw, 26px); font-weight: 500; letter-spacing: -0.02em; }
 .xp__role { color: var(--muted); }
-.xp__when { color: var(--muted); font-variant-numeric: tabular-nums; }
+.xp__when { color: var(--muted); font-variant-numeric: tabular-nums; text-align: right; }
 
 /* ---------- CONTACT ---------- */
 .contact {
@@ -288,7 +304,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .contact .eyebrow { color: rgba(251, 248, 242, 0.55); }
 .contact__title { font-size: clamp(40px, 7vw, 120px); line-height: 0.98; letter-spacing: -0.045em; font-weight: 500; margin: 0 0 28px; }
 .contact__title em { color: var(--accent); }
-.contact__sub { color: rgba(251, 248, 242, 0.65); font-size: 18px; max-width: 520px; margin: 0 0 40px; }
+.contact__sub { color: rgba(251, 248, 242, 0.65); font-size: 18px; max-width: 620px; margin: 0 0 40px; }
 .contact__actions { display: flex; flex-wrap: wrap; gap: 12px; position: relative; z-index: 1; }
 .copy {
   display: inline-flex; align-items: center; gap: 16px;
@@ -417,11 +433,13 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
   .about__body, .case__meta, .case__cols { grid-template-columns: 1fr; }
   .stats { grid-template-columns: 1fr 1fr; }
   .stats li:nth-child(3) { border-left: 0; padding-left: 0; }
+  .steps { grid-template-columns: 1fr 1fr; }
   .xp li { grid-template-columns: 1fr auto; }
   .xp__role { grid-column: 1 / -1; grid-row: 2; }
 }
 @media (max-width: 640px) {
   .badge { display: none; }
+  .steps { grid-template-columns: 1fr; }
   body { font-size: 16px; }
   .nav__links a:not(.nav__cta) { display: none; }
   .card__chips { opacity: 1; transform: none; }

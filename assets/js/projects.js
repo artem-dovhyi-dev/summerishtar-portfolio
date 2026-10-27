@@ -52,12 +52,12 @@ window.PROJECTS = [
     subtitle: 'Sour & Spicy Extra Chili',
     tags: ['Packaging', 'Campaign'],
     discipline: 'Packaging · Moodboards · Merch',
-    year: '2024',
+    year: '2023',
     client: 'PepsiCo Thailand',
     cover: 'lays-cover',
     tone: '#c8f02a',
     intro:
-      'During my time working with the PepsiCo Creative Team in Thailand, I had the exciting opportunity to contribute to the launch of a limited-edition flavor for Lay’s Thailand: Sour & Spicy Extra Chili, in 2024.',
+      'During my time working with the PepsiCo Creative Team in Thailand, I had the exciting opportunity to contribute to the launch of a limited-edition flavor for Lay’s Thailand: Sour & Spicy Extra Chili, in 2023.',
     solution:
       'I was involved from the early conceptual phase, helping shape the product’s creative direction by building on previous successful flavors. My responsibilities included brainstorming moodboards, sketching packaging layouts, and refining the design to align with both brand standards and local consumer appeal.',
     gallery: ['lays-merch'],
@@ -103,10 +103,12 @@ window.PROJECTS = [
   },
   {
     slug: 'global-double-degree',
-    title: 'Global Double Degree',
-    subtitle: 'Merch campaign',
+    title: 'Global Academy',
+    subtitle: 'Siam University · Double-degree campaign',
     tags: ['Campaign', 'Branding'],
     discipline: 'Merch · Signage · Print',
+    client: 'Global Academy at Siam University',
+    year: '2024–2025',
     cover: 'gdd-cover',
     tone: '#5b3fc4',
     intro:

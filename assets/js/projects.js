@@ -11,11 +11,11 @@ window.PROJECTS = [
     hero: 'botanik-cans',
     tone: '#a9cdf0',
     intro:
-      'As the wave of the health-conscious generation and market arises, I developed a zero-sugar sparkling botanical beverage sourced directly from European organic farms.',
+      'As a health-conscious generation and market rise, I developed a zero-sugar sparkling botanical beverage sourced directly from European organic farms.',
     problem:
       'The European non-alcoholic beverage market is highly saturated, and the brand wants to differentiate itself from clinical wellness supplements and standard soda alternatives, while maintaining a sophisticated lifestyle yet fun appeal for Millennial and Gen Z consumers.',
     solution:
-      'I produced a clean and healthy brand system that positions Botanik as an exclusive botanical drink, featuring a sleek, matte-finish slim can. The design resonates with nature, contrasting with refreshing, minimalist botanical illustrations of elegant fruits. Seeded with Roman heritage, it transforms a modern, on-the-go aluminum format to stay connected with its European roots.',
+      'I produced a clean and healthy brand system that positions Botanik as an exclusive botanical drink, featuring a sleek, matte-finish slim can. The design resonates with nature, contrasting with refreshing, minimalist botanical illustrations of elegant fruits. Drawing on Roman heritage, it turns a modern, on-the-go aluminum can into something that stays connected to its European roots.',
     gallery: [['botanik-cover', 'botanik-cherry', 'botanik-elder']],
   },
   {
@@ -59,7 +59,7 @@ window.PROJECTS = [
     intro:
       'During my time working with the PepsiCo Creative Team in Thailand, I had the exciting opportunity to contribute to the launch of a limited-edition flavor for Lay’s Thailand: Sour & Spicy Extra Chili, in 2024.',
     solution:
-      'I was involved from the early conceptual phase, helping shape the product’s creative direction from previous successful flavors. My responsibilities included brainstorming moodboards, sketching packaging layouts, and refining the design to align with both brand standards and local consumer appeal.',
+      'I was involved from the early conceptual phase, helping shape the product’s creative direction by building on previous successful flavors. My responsibilities included brainstorming moodboards, sketching packaging layouts, and refining the design to align with both brand standards and local consumer appeal.',
     gallery: ['lays-merch'],
   },
   {
@@ -96,9 +96,9 @@ window.PROJECTS = [
     hero: 'bts-system',
     tone: '#e94a2a',
     intro:
-      'The “BTS Train” project was given by my university in collaboration with BTS. Our teacher informed us it would be a team effort: my team of three girls rebranded it into something more playful and mesmerizing.',
+      'The “BTS Train” project was set by my university in collaboration with BTS. Our teacher told us it would be a team effort, and my team of three girls rebranded the skytrain into something more playful and mesmerizing.',
     solution:
-      'Everyday life in Bangkok can be busy, stressful and tiring. It was time to bring back the concept of the “land of smiles” and make transportation more than just “transportation”: a place where people have a connection, boosting up your energy. Fun fact: we leaned into orange because it makes you feel energized and enthusiastic.',
+      'Everyday life in Bangkok can be busy, stressful and tiring. It was time to bring back the concept of the “land of smiles” and make transportation more than just “transportation”: a place where people feel a connection, and that boosts your energy. Fun fact: we leaned into orange because it makes you feel energized and enthusiastic.',
     gallery: ['bts-cover', 'bts-train', 'bts-cards'],
   },
   {
@@ -124,9 +124,9 @@ window.PROJECTS = [
     cover: 'illus-cover',
     tone: '#e8604c',
     intro:
-      'These are some of the personal projects and commissions I’ve worked on over the past years. Since I love good stories, my style has a sense of hand-made, emotion-driven, and personal. Getting people to dive into my work brings me unlimited joy.',
+      'These are some of the personal projects and commissions I’ve worked on over the past years. Since I love good stories, my style feels hand-made, emotion-driven, and personal. Getting people to dive into my work brings me unlimited joy.',
     solution:
-      'Here are also a few campaigns in my local city that I joined which contributed a lot to the community. The pandemic years were rough and I got a chance to help.',
+      'There are also a few campaigns in my home city that I joined, which contributed a lot to the community. The pandemic years were rough and I got a chance to help.',
     gallery: ['illus-tarot', 'illus-women', 'illus-campaigns'],
   },
   {
@@ -167,7 +167,7 @@ window.PROJECTS = [
     cover: 'social-cover',
     tone: '#7fb6d8',
     intro:
-      'I was hired at Idea Planet agency as one of their graphic designers, producing 6 graphic visuals daily. It was a fast-paced and intense environment, but even with all the pressure I finished my tasks and received good feedback from clients and my boss.',
+      'I was hired by the Idea Planet agency as one of their graphic designers, producing 6 graphic visuals daily. It was a fast-paced and intense environment, but even with all the pressure I finished my tasks and received good feedback from clients and my boss.',
     solution:
       'I handled 22 brands in a month and learned so much about Myanmar businesses and agency life.',
     gallery: ['social-grid'],

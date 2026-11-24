@@ -1,6 +1,6 @@
 # summerishtar — portfolio
 
-Portfolio site for Thet Htar San (Summer), visual designer in Bangkok.
+Portfolio site for Summer Ishtar (Ishtar Design), Senior Brand & Digital Designer in Bangkok.
 Plain HTML/CSS/JS, no build step.
 
 ## Run locally

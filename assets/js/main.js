@@ -5,7 +5,6 @@
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ---------- Small bits ----------
-  $('#year').textContent = new Date().getFullYear();
   $('#email').textContent = window.SITE.email;
   $('#count').textContent = `(${projects.length})`;
 
@@ -49,7 +48,7 @@
       (p, i) => `<a class="card reveal ${layout[i % layout.length]}" href="#work/${p.slug}" data-tags="${p.tags.join('|')}" style="--tone:${p.tone}">
         <div class="card__media">
           <img src="${img(p.cover)}" alt="${p.title}" loading="lazy" decoding="async" />
-          <div class="card__chips">${p.tags.map((t) => `<span>${t}</span>`).join('')}</div>
+          <div class="card__chips">${[p.impact, ...p.tags].filter(Boolean).map((t) => `<span>${t}</span>`).join('')}</div>
         </div>
         <div class="card__info">
           <h3 class="card__title">${p.title} <small>${p.subtitle}</small></h3>
@@ -157,6 +156,7 @@
       ['Discipline', p.discipline],
       p.client && ['Client', p.client],
       p.year && ['Year', p.year],
+      p.impact && ['Impact', p.impact],
       ['Category', p.tags.join(', ')],
     ].filter(Boolean);
     const cols = [
@@ -204,14 +204,14 @@
       requestAnimationFrame(() => requestAnimationFrame(() => caseEl.classList.add('open')));
       $('#case-close').focus({ preventScroll: true });
     }
-    document.title = `${p.title} · Thet Htar San`;
+    document.title = `${p.title} · Summer Ishtar`;
   };
 
   const closeCase = () => {
     if (caseEl.hidden) return;
     caseEl.classList.remove('open');
     document.body.classList.remove('locked');
-    document.title = 'Thet Htar San (Summer) · Visual Designer';
+    document.title = 'Summer Ishtar — Senior Brand & Digital Design Systems Designer';
     setTimeout(() => (caseEl.hidden = true), reduceMotion ? 0 : 600);
     scrollTo({ top: lastScroll, behavior: 'instant' });
   };

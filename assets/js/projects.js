@@ -49,7 +49,8 @@ window.PROJECTS = [
   {
     slug: 'lays-extra-chili',
     title: 'Lay’s Thailand',
-    subtitle: 'Sour & Spicy Extra Chili',
+    subtitle: 'Commercial Brand & Launch System',
+    impact: '+30% Engagement • +15% Sales Growth',
     tags: ['Packaging', 'Campaign'],
     discipline: 'Packaging · Moodboards · Merch',
     year: '2023',
@@ -104,7 +105,8 @@ window.PROJECTS = [
   {
     slug: 'global-double-degree',
     title: 'Global Academy',
-    subtitle: 'Siam University · Double-degree campaign',
+    subtitle: 'Multi-Market Brand & Digital System',
+    impact: '+30% Enrollment Across 8 Markets',
     tags: ['Campaign', 'Branding'],
     discipline: 'Merch · Signage · Print',
     client: 'Global Academy at Siam University',

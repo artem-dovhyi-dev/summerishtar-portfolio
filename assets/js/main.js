@@ -28,6 +28,64 @@
     setTimeout(() => (hint.textContent = 'Copy'), 1800);
   });
 
+  // ---------- Hero canvas ----------
+  // Stagger words + chips, then reveal the "selected frame" around the headline.
+  document.querySelectorAll('.hero__title > *').forEach((el, i) => el.style.setProperty('--i', i));
+  requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('loaded')));
+
+  const frame = $('#frame');
+  const frameSize = $('#frame-size');
+  const sizeIt = () => {
+    const r = frame.getBoundingClientRect();
+    frameSize.textContent = `${Math.round(r.width)} × ${Math.round(r.height)}`;
+  };
+  sizeIt();
+  new ResizeObserver(sizeIt).observe(frame);
+
+  // ---------- Text loops: fill each track to at least 2× the viewport, then duplicate ----------
+  // Copy the headline's chip icons into the loop chips so the icons stay in one place.
+  document.querySelectorAll('#loop .chip').forEach((c) => {
+    const src = $(`.hero__title .${[...c.classList].find((k) => k.startsWith('chip--'))}`);
+    if (src) c.innerHTML = src.innerHTML;
+  });
+  ['#loop', '#sign'].forEach((sel) => {
+    const track = $(sel);
+    const unit = track.innerHTML;
+    let html = unit;
+    track.innerHTML = html;
+    while (track.scrollWidth < innerWidth * 1.2) { html += unit; track.innerHTML = html; }
+    track.innerHTML = html + html;
+  });
+
+  // ---------- Sticker pile: drops in on scroll, then each sticker can be dragged ----------
+  const pile = $('#pile');
+  pile.querySelectorAll('.sticker').forEach((s) => {
+    s.addEventListener('animationend', () => s.classList.add('landed'));
+    if (reduceMotion) s.classList.add('landed');
+  });
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    pile.addEventListener('pointerdown', (e) => {
+      const s = e.target.closest('.sticker');
+      if (!s) return;
+      s.classList.add('landed', 'dragging');
+      pile.append(s); // bring to front
+      s.setPointerCapture(e.pointerId);
+      const sx = e.clientX - (parseFloat(s.style.getPropertyValue('--dx')) || 0);
+      const sy = e.clientY - (parseFloat(s.style.getPropertyValue('--dy')) || 0);
+      const move = (ev) => {
+        s.style.setProperty('--dx', `${ev.clientX - sx}px`);
+        s.style.setProperty('--dy', `${ev.clientY - sy}px`);
+      };
+      const up = () => {
+        s.classList.remove('dragging');
+        s.removeEventListener('pointermove', move);
+      };
+      s.addEventListener('pointermove', move);
+      s.addEventListener('pointerup', up, { once: true });
+      s.addEventListener('pointercancel', up, { once: true });
+    });
+  }
+
   // ---------- Marquee ----------
   const marquee = $('#marquee');
   const loop = [...projects, ...projects];
@@ -51,8 +109,8 @@
           <div class="card__chips">${[p.impact, ...p.tags].filter(Boolean).map((t) => `<span>${t}</span>`).join('')}</div>
         </div>
         <div class="card__info">
+          <p class="card__cat"><span>${p.tags.join(' / ')}</span><span class="card__num">${String(i + 1).padStart(2, '0')}</span></p>
           <h3 class="card__title">${p.title} <small>${p.subtitle}</small></h3>
-          <span class="card__num">${String(i + 1).padStart(2, '0')}</span>
         </div>
       </a>`
     )

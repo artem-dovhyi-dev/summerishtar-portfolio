@@ -31,42 +31,91 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
+    <!-- HERO: a design-canvas take — guides, a selected frame, a live cursor -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="guides" aria-hidden="true">
+        <i class="guide guide--h" style="--y: 26%"></i>
+        <i class="guide guide--h" style="--y: 74%"></i>
+        <i class="guide guide--v" style="--x: var(--pad)"></i>
+      </div>
+
       <div class="hero__meta reveal">
         <span class="status"><i></i>SELECTED WORK FOR PEPSICO (LAY’S, QUAKER) • UNICEF • SIAM UNIVERSITY • GLOBAL STARTUPS</span>
         <span>Bangkok, TH · <time id="clock">--:--</time></span>
       </div>
 
-      <h1 class="hero__title">
-        <span class="line reveal">Brand &amp; Digital Systems That Make</span>
-        <span class="line reveal">Audiences <em>Stop, Trust,</em> and <em class="hl">Convert.</em></span>
-      </h1>
-      <p class="hero__sub reveal">I’m Summer Ishtar — a Senior Brand &amp; Digital Designer bridging commercial brand identity, structured Figma UI systems, and high-craft web experiences for remote international agencies and ambitious startups.</p>
-      <div class="hero__ctas reveal">
-        <a class="hero__cta hero__cta--primary" href="#work">View Selected Work</a>
-        <a class="hero__cta" href="#contact">Work With Me</a>
+      <div class="hero__grid">
+        <div class="hero__copy">
+        <div class="frame" id="frame">
+          <span class="frame__label" aria-hidden="true"><b>#</b> Hero / Summer Ishtar</span>
+          <span class="frame__size" aria-hidden="true" id="frame-size">Hug × Hug</span>
+          <i class="frame__handle" aria-hidden="true"></i><i class="frame__handle" aria-hidden="true"></i><i class="frame__handle" aria-hidden="true"></i><i class="frame__handle" aria-hidden="true"></i>
+          <h1 class="hero__title" id="hero-title">
+            <span class="word">Brand</span> <span class="word">&amp;</span> <span class="word">Digital</span> <span class="word">Systems</span> <span class="word">That</span> <span class="word">Make</span> <span class="word">Audiences</span>
+            <span class="chip chip--eye" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="word"><em>Stop,</em></span>
+            <span class="chip chip--trust" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span class="word"><em>Trust,</em></span>
+            <span class="word">and</span>
+            <span class="chip chip--convert" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="word"><em class="hl">Convert.</em></span>
+          </h1>
+          <div class="mate" aria-hidden="true"><svg viewBox="0 0 16 18"><path d="M1 1l13 6.2-5.6 1.6L5.8 15z"/></svg><span>Summer</span></div>
+        </div>
+        <p class="hero__sub reveal">I’m Summer Ishtar — a Senior Brand &amp; Digital Designer bridging commercial brand identity, structured Figma UI systems, and high-craft web experiences for remote international agencies and ambitious startups.</p>
+        <div class="hero__ctas reveal">
+          <a class="hero__cta hero__cta--primary" href="#work">View Selected Work</a>
+          <a class="hero__cta" href="#contact">Work With Me</a>
+        </div>
+        </div>
+
+        <figure class="portrait reveal">
+          <div class="portrait__photo"><img src="assets/img/summer-portrait.webp" alt="Portrait of Summer Ishtar" width="800" height="1023" fetchpriority="high" /></div>
+          <a class="badge" href="#work" aria-label="View Selected Work">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <defs><path id="circ" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" /></defs>
+              <text><textPath href="#circ" textLength="462" lengthAdjust="spacing">view selected work · brand &amp; digital systems · </textPath></text>
+            </svg>
+            <span>↓</span>
+          </a>
+        </figure>
       </div>
 
-      <a class="badge" href="#work" aria-label="View Selected Work">
-        <svg viewBox="0 0 200 200" aria-hidden="true">
-          <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>
-          <text><textPath href="#circ" textLength="486" lengthAdjust="spacing">view selected work · brand &amp; digital systems · </textPath></text>
-        </svg>
-        <span>↓</span>
-      </a>
-
-      <ul class="tags reveal" aria-label="Capabilities">
-        <li>Brand Identity &amp; Visual Architecture</li>
-        <li>Figma UI &amp; Digital Design Systems</li>
-        <li>Conversion Pitch Decks &amp; Launch Narratives</li>
-        <li>AI-Accelerated Creative Direction</li>
-      </ul>
     </section>
 
     <!-- MARQUEE -->
     <section class="marquee" aria-label="Work preview">
       <div class="marquee__track" id="marquee"></div>
+    </section>
+
+    <!-- CAPABILITIES: a pile of stickers that drops in on scroll -->
+    <section class="process" id="process">
+      <div class="board reveal">
+        <div class="board__head">
+          <p class="eyebrow">Capabilities</p>
+          <h2 class="process__title">Fast where it helps, <em>careful</em> where it counts.</h2>
+        </div>
+        <div class="pile" id="pile" aria-hidden="true">
+          <span class="sticker s-brand"><b>Brand</b><small>Identity</small></span>
+          <span class="sticker s-figma"><small>Figma UI</small><b>Systems</b></span>
+          <span class="sticker s-deck"><b>Pitch</b><small>Decks</small></span>
+          <span class="sticker s-ai"><small>AI-Accelerated</small><b>Direction</b></span>
+          <span class="sticker s-pack"><b>Packaging</b></span>
+          <span class="sticker s-camp"><b>Campaigns</b><small>&amp; Launches</small></span>
+          <span class="sticker s-illu"><em>Illustration</em></span>
+          <span class="sticker s-star">✱</span>
+        </div>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><span class="steps__num">01</span><h3>Brand Identity &amp; Visual Architecture</h3><p>Commercial positioning, typography scales, color systems, and cohesive brand foundations built for digital scale.</p></li>
+        <li class="reveal"><span class="steps__num">02</span><h3>Figma UI &amp; Digital Design Systems</h3><p>Translating brand rules into structured Figma component libraries, responsive web layouts, and clean, organized handoff files.</p></li>
+        <li class="reveal"><span class="steps__num">03</span><h3>Conversion Pitch Decks &amp; Launch Narratives</h3><p>Investor decks, executive presentations, and commercial launch visuals engineered to win stakeholders and buyers.</p></li>
+        <li class="reveal"><span class="steps__num">04</span><h3>AI-Accelerated Creative Direction</h3><p>Rapid concepting and visual exploration using Midjourney, Gemini, and modern AI workflows without sacrificing craft.</p></li>
+      </ol>
+    </section>
+
+    <!-- TEXT LOOP -->
+    <section class="loop" aria-hidden="true">
+      <div class="loop__track" id="loop">
+        <span>Stop</span><i class="chip chip--eye"></i><span>Trust</span><i class="chip chip--trust"></i><span><em>Convert</em></span><i class="chip chip--convert"></i>
+      </div>
     </section>
 
     <!-- WORK -->
@@ -98,18 +147,6 @@
       </ul>
     </section>
 
-    <!-- PROCESS -->
-    <section class="process" id="process">
-      <p class="eyebrow reveal">Capabilities</p>
-      <h2 class="process__title reveal">Fast where it helps, <em>careful</em> where it counts.</h2>
-      <ol class="steps">
-        <li class="reveal"><span class="steps__num">01</span><h3>Brand Identity &amp; Visual Architecture</h3><p>Commercial positioning, typography scales, color systems, and cohesive brand foundations built for digital scale.</p></li>
-        <li class="reveal"><span class="steps__num">02</span><h3>Figma UI &amp; Digital Design Systems</h3><p>Translating brand rules into structured Figma component libraries, responsive web layouts, and clean, organized handoff files.</p></li>
-        <li class="reveal"><span class="steps__num">03</span><h3>Conversion Pitch Decks &amp; Launch Narratives</h3><p>Investor decks, executive presentations, and commercial launch visuals engineered to win stakeholders and buyers.</p></li>
-        <li class="reveal"><span class="steps__num">04</span><h3>AI-Accelerated Creative Direction</h3><p>Rapid concepting and visual exploration using Midjourney, Gemini, and modern AI workflows without sacrificing craft.</p></li>
-      </ol>
-    </section>
-
     <!-- EXPERIENCE -->
     <section class="experience" id="experience">
       <p class="eyebrow reveal">Experience</p>
@@ -123,6 +160,12 @@
       </ol>
     </section>
   </main>
+
+  <!-- SIGN-OFF LOOP -->
+  <section class="sign" aria-hidden="true">
+    <div class="sign__track" id="sign"><span>Summer Ishtar</span><i class="chip chip--star">✱</i></div>
+    <span class="sign__sticker">Available for <em>remote work</em></span>
+  </section>
 
   <!-- CONTACT -->
   <footer class="contact" id="contact">

@@ -240,6 +240,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spa
 .about__body { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(28px, 6vw, 96px); align-items: start; }
 .about__lead { font-size: clamp(28px, 3.4vw, 52px); line-height: 1.08; letter-spacing: -0.035em; font-weight: 500; margin: 0; }
 .about__lead em { color: var(--accent); }
+.about__photo { display: block; width: 100%; max-width: 360px; margin-top: clamp(28px, 4vw, 48px); }
+.about__photo img { display: block; width: 100%; height: auto; border-radius: var(--radius); background: #dcd6d6; }
 .about__text { color: #4a453f; font-size: 18px; }
 .about__text p { margin: 0 0 1em; }
 .stats {
